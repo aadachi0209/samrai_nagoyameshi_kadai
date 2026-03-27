@@ -15,7 +15,7 @@ phases:
     commands:
       - echo "[BUILD] Building Laravel Docker image..."
       - docker build --no-cache -f Dockerfile.deployment -t ${CONTAINER_NAME} .
-      - docker tag ${CONTAINER_NAME}:latest ${REPOSITORY_URI}:latest
+      - docker tag ${CONTAINER_NAME} ${REPOSITORY_URI}:latest
 
   post_build:
     commands:
